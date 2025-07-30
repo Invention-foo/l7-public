@@ -34,7 +34,7 @@ DEV_MODE = os.getenv('DEV_MODE', 'false').lower() == 'true'
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 redis_client = redis.StrictRedis(host=REDIS_HOST, port=REDIS_PORT, db=0)
 
-# Environment variables with dev/prod bot tokens
+# Environment variables with dev/prod bot tokens. Hard coded token was for in the moment testing with an ad-hoc bot :)
 TELEGRAM_BOT_TOKEN = '7201817971:AAHA6vRXEJptxNMe10XghPvxq0Qt2K599sY' if DEV_MODE else os.getenv('TELEGRAM_BOT_TOKEN')
 
 # Queue to hold messages to be sent
